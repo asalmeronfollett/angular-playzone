@@ -33,6 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Useful commands
 
 * `docker-compose build --no-cache` **nocache** is for ignoring cache when build each layer within the Dockerfile
-* `docker-compose up -d` **d** is for running on detach mode
+* `docker-compose up -d --build` **d** is for running on detach mode, **build** is to rebuild the docker image if necessary
 * `docker-compose ps` for listing the running containers
 * `docker-compose down` for stoping all running containers
+* `docker exec -it <container_name> sh` to get inside the container's terminal
