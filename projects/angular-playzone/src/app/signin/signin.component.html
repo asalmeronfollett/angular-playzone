@@ -1,0 +1,10 @@
+<div [formGroup]="form" (submit)="submit()">
+    <div>
+        <input type="text" formControlName="userEmail">
+    </div>
+    <button>Submit</button>
+</div>
+<br>
+{{form.value | json}}
+
+<button type="button" (click)="form.reset()">Rest</button>
