@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Requirements
+
+* Docker
+
+## Useful commands
+
+* `docker-compose build --no-cache` **nocache** is for ignoring cache when build each layer within the Dockerfile
+* `docker-compose up -d` **d** is for running on detach mode
+* `docker-compose ps` for listing the running containers
+* `docker-compose down` for stoping all running containers
