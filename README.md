@@ -37,3 +37,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * `docker-compose ps` for listing the running containers
 * `docker-compose down` for stoping all running containers
 * `docker exec -it <container_name> sh` to get inside the container's terminal
+
+## Resources
+
+* [Testing components with children](https://testing-angular.com/testing-components-with-children/#faking-a-child-component)
+* [falso](https://github.com/ngneat/falso) for creating fake data
+* [Airbnb Javascript styleguide](https://github.com/airbnb/javascript)
+* [Comitizen](https://commitizen-tools.github.io/commitizen/) for conventional commits
+* [Standard version](https://github.com/conventional-changelog/standard-version) for versioning using **Semantic versioning**
