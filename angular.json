@@ -28,7 +28,11 @@
               "projects/angular-playzone/src/assets"
             ],
             "styles": [
-              "projects/angular-playzone/src/styles.scss"
+              "projects/angular-playzone/src/styles.scss",
+              "node_modules/primeng/resources/themes/nova/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -96,7 +100,11 @@
               "projects/angular-playzone/src/assets"
             ],
             "styles": [
-              "projects/angular-playzone/src/styles.scss"
+              "projects/angular-playzone/src/styles.scss",
+              "node_modules/primeng/resources/themes/nova/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           }

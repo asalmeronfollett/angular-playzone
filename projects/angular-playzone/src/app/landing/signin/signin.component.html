@@ -1,14 +1,20 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="field pb-2">
-        <input type="text" formControlName="userEmail">
-    </div>
+<p-card>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="pb-3">
+        <div class="field pb-5">
+            <input pInputText  type="text" formControlName="userEmail">
+        </div>
+
+        <button pButton class="button" type="submit">Submit</button>
+    </form>
 
     <hr>
 
-    <button class="button" type="submit">Submit</button>
-</form>
+    <pre class="pb-3">
+        <p>FormData</p>
+        <code>{{form.value | json}}</code>
+    </pre>
 
-<br>
-{{form.value | json}}
+    <hr>
 
-<button type="button" (click)="form.reset()">Rest</button>
+    <button pButton type="button" (click)="form.reset()">Rest</button>
+</p-card>
