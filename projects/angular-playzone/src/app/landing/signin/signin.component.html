@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="field pb-2">
+        <input type="text" formControlName="userEmail">
+    </div>
+
+    <hr>
+
+    <button class="button" type="submit">Submit</button>
+</form>
+
+<br>
+{{form.value | json}}
+
+<button type="button" (click)="form.reset()">Rest</button>

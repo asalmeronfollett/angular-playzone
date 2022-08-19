@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { randEmail } from '@ngneat/falso';
+import { ActivatedRoute } from '@angular/router';
+import { randEmail, randUuid } from '@ngneat/falso';
+import { from } from 'rxjs';
 import { SigninComponent } from './signin.component';
 
 
@@ -11,7 +13,12 @@ describe('SigninComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SigninComponent],
-      imports: [ReactiveFormsModule]
+      imports: [ReactiveFormsModule],
+      providers: [
+        {
+          provide: ActivatedRoute, useValue: { data: from([{ id: randUuid() }]), },
+        }
+      ]
     })
       .compileComponents();
 
@@ -25,15 +32,15 @@ describe('SigninComponent', () => {
   });
 
   it('submit should return false if form is invalid', () => {
-    const submitRes = component.submit();
+    const submitRes = component.onSubmit();
     expect(submitRes).toBeFalse();
   });
 
-  it('submit should return true if form is valid', async () => {
+  it('submit should return true if form is valid', () => {
     const userEmailCtrl = component.form.controls['userEmail'];
     const userEmail = randEmail();
     userEmailCtrl.setValue(userEmail);
-    const submitRes = component.submit();
+    const submitRes = component.onSubmit();
     expect(submitRes).toBeTrue();
   });
 });
