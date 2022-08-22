@@ -32,11 +32,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Useful commands
 
+### Docker
+
 * `docker-compose build --no-cache` **nocache** is for ignoring cache when build each layer within the Dockerfile
 * `docker-compose up -d --build` **d** is for running on detach mode, **build** is to rebuild the docker image if necessary
 * `docker-compose ps` for listing the running containers
 * `docker-compose down` for stoping all running containers
 * `docker exec -it <container_name> sh` to get inside the container's terminal
+
+### Commitizen
+
+Command line tool for doing cli assited conventional commits
+
+* `npm run commit`
 
 ## Resources
 
@@ -45,3 +53,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * [Airbnb Javascript styleguide](https://github.com/airbnb/javascript)
 * [Comitizen](https://commitizen-tools.github.io/commitizen/) for conventional commits
 * [Standard version](https://github.com/conventional-changelog/standard-version) for versioning using **Semantic versioning**
+* [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) useful for convention on how to do commit messages
