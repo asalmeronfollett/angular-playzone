@@ -1,16 +1,21 @@
 {
   "name": "angular-playzone",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
+    "build": "ng build",
+    "commit": "cz",
+    "commitizen": "commitizen",
     "ng": "ng",
     "start": "ng serve --host=0.0.0.0 --poll 1000 --port 4201",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "commit": "cz",
-    "commitizen": "commitizen"
+    "watch": "ng build --watch --configuration development"
   },
-  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@angular/animations": "^14.1.0",
     "@angular/common": "^14.1.0",
@@ -41,11 +46,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^14.1.0",
     "typescript": "~4.7.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
